@@ -824,9 +824,9 @@ footer{
     }
     .featured-image{
         /* background-color: #1e9fab; */
-        padding: 50px 0 120px 0;
+        padding: 50px 0 90px 0;
     }
     .featured-text-info{
-        /* background-color: #777; */
+        font-size: 13px;
     }
 }

@@ -197,6 +197,8 @@ nav{
 .featured-name{
     font-size: 50px;
     font-weight: 600;
+    /* background-color: #777; */
+    
     color: var(--text-color-second);
     margin-block: 20px;
 }
@@ -760,7 +762,11 @@ footer{
         order: 2;
         justify-content: center;
         align-content: flex-start;
+        align-items: center;
         min-height: 60vh;
+    }
+    .featured-text-info{
+        text-align: center;
     }
     .social_icons{
         margin-top: 2em;
@@ -804,6 +810,7 @@ footer{
 @media only screen and (max-width: 540px){
     .featured-name{
         font-size: 40px;
+        text-align: center;
     }
     .project-box{
         width: 100%;

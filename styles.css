@@ -458,6 +458,10 @@ h3{
   background-color: var(--first-color) !important;
   color: white !important;
 }
+.select-dropdown li:first-child{
+    background-color: var(--first-color);
+    color: white;
+}
 .select-dropdown input:focus ~ label {
   /* background-color: #1e9fab; */
 }

@@ -126,6 +126,32 @@
                 <div class="top-header">
                     <h1>Experiences</h1>
                 </div>
+                <div class="experiences-select">
+                    <button class="select-button"
+                        role="combobox"
+                        aria-labelledby="select button"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-controls="select-dropdown"
+                    >
+                    <span class="selected-value">Work</span>
+                    <span class="arrow"></span>
+                    </button>
+                    <ul class="select-dropdown" role="listbox" id="select-dropdown">
+                        <li role="option">
+                            <input type="radio" id="work" name="experiences-type" />
+                            <label for="work">Work</label>
+                        </li>
+                        <li role="option">
+                            <input type="radio" id="education" name="experiences-type" />
+                            <label for="education">Education</label>
+                        </li>
+                        <li role="option">
+                            <input type="radio" id="volunteer" name="experiences-type" />
+                            <label for="volunteer">Volunteer</label>
+                        </li>
+                    </ul>
+                </div>
                 <div class="experiences-container">
                     <div class="tab-titles">
                         <p class="tab-links active-tab-link" onclick="openTab('works')">Work</p>

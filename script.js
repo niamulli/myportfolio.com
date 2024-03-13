@@ -20,6 +20,41 @@ function myMenuFunction(){
     element.addEventListener("click", closeMenu);
   }
   
+  const experiencesSelect = document.querySelector(".experiences-select");
+const selectBtn = document.querySelector(".select-button");
+
+const selectedValue = document.querySelector(".selected-value");
+const optionsList = document.querySelectorAll(".select-dropdown li");
+
+// add click event to select button
+selectBtn.addEventListener("click", () => {
+  // add/remove active class on the container element
+  experiencesSelect.classList.toggle("active");
+  // update the aria-expanded attribute based on the current state
+  selectBtn.setAttribute(
+    "aria-expanded",
+    selectBtn.getAttribute("aria-expanded") === "true" ? "false" : "true"
+  );
+});
+
+optionsList.forEach((option) => {
+
+  function handler(e) {
+    // Click Events
+    if (e.type === "click" && e.clientX !== 0 && e.clientY !== 0) {
+      selectedValue.textContent = this.children[1].textContent;
+      experiencesSelect.classList.remove("active");
+    }
+    // Key Events
+    if (e.key === "Enter") {
+      selectedValue.textContent = this.textContent;
+      experiencesSelect.classList.remove("active");
+    }
+  }
+
+  option.addEventListener("keyup", handler);
+  option.addEventListener("click", handler);
+});
   /* ----- ADD SHADOW ON NAVIGATION BAR WHILE SCROLLING ----- */
   window.onscroll = function() {headerShadow()};
   
@@ -141,3 +176,4 @@ const openTab = (tabName) => {
   event.currentTarget.classList.add('active-tab-link');
   document.getElementById(tabName).classList.add('active-tab');
 }
+

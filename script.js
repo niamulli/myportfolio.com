@@ -1,12 +1,23 @@
 /* ----- NAVIGATION BAR FUNCTION ----- */
+let menuBtn = document.getElementById("myNavMenu");
+let navList = document.getElementsByClassName("nav_list");
+console.log(navList);
 function myMenuFunction(){
-    let menuBtn = document.getElementById("myNavMenu");
-  
+    
     if(menuBtn.className === "nav-menu"){
       menuBtn.className += " responsive";
     } else {
       menuBtn.className = "nav-menu";
     }
+  }
+
+  const closeMenu = () => {
+    menuBtn.className = "nav-menu";
+  }
+
+  for (let i = 0; i < navList.length; i++) {
+    const element = navList[i];
+    element.addEventListener("click", closeMenu);
   }
   
   /* ----- ADD SHADOW ON NAVIGATION BAR WHILE SCROLLING ----- */

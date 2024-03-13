@@ -776,7 +776,7 @@ footer{
         justify-content: center;
         min-height: 150px;
         width: 100%;
-        margin-top: 65px;
+        margin-top: 60px;
         /* background-color: #1e9fab; */
     }
     .row{
@@ -833,7 +833,6 @@ footer{
     }
     .featured-text{
         margin-bottom: 30px;
-        /* background-color: #777; */
     }
     .scroll-btn{
         width: 130px;
@@ -841,5 +840,13 @@ footer{
     }
     .scroll-btn, .scroll-btn i {
         font-size: 13px;
+    }
+    .nav-name {
+        font-size: 24px;
+    }
+    .nav-logo span{
+        font-size: 4em;
+        top: -13px;
+        right: -12px;
     }
 }

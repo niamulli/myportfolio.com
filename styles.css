@@ -419,7 +419,7 @@ h3{
     background-color: #fff;
     border: 1px solid #caced1;
     border-radius: 4px;
-    padding: 10px;
+    /* padding: 10px; */
     margin-top: 10px;
     left: 0;
     max-height: 200px;
@@ -435,7 +435,10 @@ h3{
 }
 .select-dropdown li{
     position: relative;
+    z-index: 8;
     cursor: pointer;
+    padding: 7px;
+    /* background-color: #1e9fab; */
     display: flex;
     gap: 1rem;
     align-items: center;
@@ -451,17 +454,19 @@ h3{
     background: #ccc;
     border-radius: 25px;
 }
-.select-dropdown li:hover,
-.select-dropdown input:checked ~ label {
-  background-color: #f2f2f2;
+.select-dropdown li:hover{
+  background-color: var(--first-color) !important;
+  color: white !important;
 }
 .select-dropdown input:focus ~ label {
-  background-color: #dfdfdf;
+  /* background-color: #1e9fab; */
 }
 .select-dropdown input[type="radio"] {
   position: absolute;
   left: 0;
   opacity: 0;
+  width: 100%;
+  height: 100%;
 }
 .experiences-select.active .arrow {
     transform: rotate(180deg);

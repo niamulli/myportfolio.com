@@ -22,6 +22,7 @@ function myMenuFunction(){
   
   const experiencesSelect = document.querySelector(".experiences-select");
 const selectBtn = document.querySelector(".select-button");
+const radioInputList = document.querySelectorAll(".radio-select");
 
 const selectedValue = document.querySelector(".selected-value");
 const optionsList = document.querySelectorAll(".select-dropdown li");
@@ -38,23 +39,37 @@ selectBtn.addEventListener("click", () => {
 });
 
 optionsList.forEach((option) => {
+  
 
   function handler(e) {
     // Click Events
     if (e.type === "click" && e.clientX !== 0 && e.clientY !== 0) {
       selectedValue.textContent = this.children[1].textContent;
       experiencesSelect.classList.remove("active");
+      optionsList.forEach((option) => {
+        option.classList.remove("active-radio");
+        option.style.backgroundColor = "#fff";
+        option.style.color = "#000";
+      })   
+      option.classList.add("active-radio");
+      option.style.backgroundColor = "rgb(110, 87, 224)"
+      option.style.color = "#fff";
     }
     // Key Events
     if (e.key === "Enter") {
       selectedValue.textContent = this.textContent;
       experiencesSelect.classList.remove("active");
+      option.classList.add("active-radio");
     }
+
+  
   }
 
   option.addEventListener("keyup", handler);
   option.addEventListener("click", handler);
 });
+
+
   /* ----- ADD SHADOW ON NAVIGATION BAR WHILE SCROLLING ----- */
   window.onscroll = function() {headerShadow()};
   

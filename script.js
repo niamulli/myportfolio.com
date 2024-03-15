@@ -116,14 +116,18 @@ function myMenuFunction(){
 const tabLinks = document.getElementsByClassName('tab-links');
 const tabContents = document.getElementsByClassName('tab-contents');
 
+const selectedValue = document.querySelector(".selected-value");
 
 const openTab = (tabName) => {
+  let strSelected = tabName.charAt(0).toUpperCase() + tabName.slice(1);
   for(tabLink of tabLinks){
     tabLink.classList.remove('active-tab-link');
   }
   for(tabContent of tabContents){
     tabContent.classList.remove('active-tab');
   }
+  selectedValue.textContent = strSelected;
+  experiencesSelect.classList.remove('active');
   event.currentTarget.classList.add('active-tab-link');
   document.getElementById(tabName).classList.add('active-tab');
 }
@@ -132,10 +136,8 @@ const optionLinks = document.querySelector('.select-dropdown li');
 
 const experiencesSelect = document.querySelector(".experiences-select");
 const selectBtn = document.querySelector(".select-button");
-const radioInputList = document.querySelectorAll(".radio-select");
 
-const selectedValue = document.querySelector(".selected-value");
-const optionsList = document.querySelectorAll(".select-dropdown li");
+
 
 // add click event to select button
 selectBtn.addEventListener("click", () => {

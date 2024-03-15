@@ -439,6 +439,7 @@ h3{
 }
 .select-dropdown li{
     position: relative;
+    z-index: 1;
     cursor: pointer;
     padding: 7px;
     /* background-color: #1e9fab; */
@@ -512,7 +513,6 @@ h3{
     flex-direction: column;
     border-radius: 12px;
     max-width: 400px;
-    position: relative;
     margin-right: -20px;
     /* left: 4rem; */
     padding: 20px;
@@ -556,7 +556,7 @@ h3{
     left: auto;
     right: 4rem;
 }
-.row.works{
+.row.work{
     font-size: 14px;
     background: var(--color-white);
     gap: 0;
@@ -575,7 +575,7 @@ h3{
     padding: 40px;
     /* background-color: #1e9fab; */
 }
-.works .col{
+.work .col{
     padding: 20px;
     display: block;
     /* border: 1px solid var(--text-color-second); */
@@ -594,7 +594,7 @@ h3{
     color: var(--text-color-second);
     display: block;
 }
-.works .position{
+.work .position{
     font-size: 16px;
     color: var(--text-color-second);
 }
@@ -918,7 +918,7 @@ footer{
     .tab-contents{
         background: var(--body-color);
     }
-    .row .works{
+    .row .work{
         background-color: var(--body-color);
     }
     .featured-name{
@@ -967,5 +967,8 @@ footer{
         font-size: 4em;
         top: -13px;
         right: -12px;
+    }
+    .education .left, .volunteer .left{
+        position: initial;
     }
 }

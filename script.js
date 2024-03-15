@@ -19,56 +19,6 @@ function myMenuFunction(){
     const element = navList[i];
     element.addEventListener("click", closeMenu);
   }
-  
-  const experiencesSelect = document.querySelector(".experiences-select");
-const selectBtn = document.querySelector(".select-button");
-const radioInputList = document.querySelectorAll(".radio-select");
-
-const selectedValue = document.querySelector(".selected-value");
-const optionsList = document.querySelectorAll(".select-dropdown li");
-
-// add click event to select button
-selectBtn.addEventListener("click", () => {
-  // add/remove active class on the container element
-  experiencesSelect.classList.toggle("active");
-  // update the aria-expanded attribute based on the current state
-  selectBtn.setAttribute(
-    "aria-expanded",
-    selectBtn.getAttribute("aria-expanded") === "true" ? "false" : "true"
-  );
-});
-
-optionsList.forEach((option) => {
-  
-
-  function handler(e) {
-    // Click Events
-    if (e.type === "click" && e.clientX !== 0 && e.clientY !== 0) {
-      selectedValue.textContent = this.children[1].textContent;
-      experiencesSelect.classList.remove("active");
-      optionsList.forEach((option) => {
-        option.classList.remove("active-radio");
-        option.style.backgroundColor = "#fff";
-        option.style.color = "#000";
-      })   
-      option.classList.add("active-radio");
-      option.style.backgroundColor = "rgb(110, 87, 224)"
-      option.style.color = "#fff";
-    }
-    // Key Events
-    if (e.key === "Enter") {
-      selectedValue.textContent = this.textContent;
-      experiencesSelect.classList.remove("active");
-      option.classList.add("active-radio");
-    }
-
-  
-  }
-
-  option.addEventListener("keyup", handler);
-  option.addEventListener("click", handler);
-});
-
 
   /* ----- ADD SHADOW ON NAVIGATION BAR WHILE SCROLLING ----- */
   window.onscroll = function() {headerShadow()};
@@ -90,15 +40,6 @@ optionsList.forEach((option) => {
   
     }
   }
-  
-  /* ----- TYPING EFFECT ----- */
-//   let typingEffect = new Typed(".typedText",{
-//     strings : ["Designer","Youtuber","Developer"],
-//     loop : true,
-//     typeSpeed : 100,
-//     backSpeed : 80,
-//     backDelay : 2000
-//   })
   
   /* ----- ## -- SCROLL REVEAL ANIMATION -- ## ----- */
   const sr = ScrollReveal({
@@ -132,9 +73,8 @@ optionsList.forEach((option) => {
   reset: true
   })
   
-  // srLeft.reveal('.about-info.left',{delay: 100})
+
   srLeft.reveal('.contact-info',{delay: 100})
-  // srLeft.reveal('.description-text.left',{delay: 100})
   
   // /* -- ABOUT SKILLS & FORM BOX -- */
   const srRight = ScrollReveal({
@@ -144,10 +84,7 @@ optionsList.forEach((option) => {
   reset: true
   })
   
-  // srRight.reveal('.skills-box',{delay: 100})
-  // srRight.reveal('.about-info.right',{delay: 100})
   srRight.reveal('.form-control',{delay: 100})
-  // srRight.reveal('.description-text.right',{delay: 100})
   
   /* ----- CHANGE ACTIVE LINK ----- */
   
@@ -179,7 +116,6 @@ optionsList.forEach((option) => {
 const tabLinks = document.getElementsByClassName('tab-links');
 const tabContents = document.getElementsByClassName('tab-contents');
 
-console.log(tabContents);
 
 const openTab = (tabName) => {
   for(tabLink of tabLinks){
@@ -192,3 +128,22 @@ const openTab = (tabName) => {
   document.getElementById(tabName).classList.add('active-tab');
 }
 
+const optionLinks = document.querySelector('.select-dropdown li');
+
+const experiencesSelect = document.querySelector(".experiences-select");
+const selectBtn = document.querySelector(".select-button");
+const radioInputList = document.querySelectorAll(".radio-select");
+
+const selectedValue = document.querySelector(".selected-value");
+const optionsList = document.querySelectorAll(".select-dropdown li");
+
+// add click event to select button
+selectBtn.addEventListener("click", () => {
+  // add/remove active class on the container element
+  experiencesSelect.classList.toggle("active");
+  // update the aria-expanded attribute based on the current state
+  selectBtn.setAttribute(
+    "aria-expanded",
+    selectBtn.getAttribute("aria-expanded") === "true" ? "false" : "true"
+  );
+});

@@ -433,9 +433,12 @@ h3{
 .select-dropdown:focus-within{
     box-shadow: 0 10px 25px rgba(94, 108, 233, 0.6);
 }
+.select-dropdown .active-tab-link{
+    background-color: var(--first-color);
+    color: white;
+}
 .select-dropdown li{
     position: relative;
-    z-index: 8;
     cursor: pointer;
     padding: 7px;
     /* background-color: #1e9fab; */
@@ -457,10 +460,6 @@ h3{
 .select-dropdown li:hover{
     background-color: var(--first-color) !important;
     color: white !important;
-}
-.select-dropdown li:first-child{
-    background-color: var(--first-color);
-    color: white;
 }
 .select-dropdown input[type="radio"] {
   position: absolute;
@@ -895,7 +894,7 @@ footer{
 
 /* ----- MEDIA QUERY == 540px / RESPONSIVE ----- */
 
-@media only screen and (max-width: 540px){
+@media only screen and (max-width: 600px){
     .section:not(#home){
         padding-block: 2em;
     }

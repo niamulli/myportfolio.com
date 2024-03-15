@@ -138,15 +138,15 @@
                     <span class="arrow"></span>
                     </button>
                     <ul class="select-dropdown" role="listbox" id="select-dropdown">
-                        <li role="option">
+                        <li role="option" onclick="openTab('works')" class="tab-links active-tab-link">
                             <input type="radio" class="radio-select" checked id="workOption" name="experiences-type" />
                             <label for="workOption">Work</label>
                         </li>
-                        <li role="option">
+                        <li role="option" onclick="openTab('educations')" class="tab-links">
                             <input type="radio" id="educationOption" class="radio-select" name="experiences-type" />
                             <label for="educationOption">Education</label>
                         </li>
-                        <li role="option">
+                        <li role="option" onclick="openTab('volunteer')" class="tab-links">
                             <input type="radio" id="volunteerOption" class="radio-select" name="experiences-type" />
                             <label for="volunteerOption">Volunteer</label>
                         </li>

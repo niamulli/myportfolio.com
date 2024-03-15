@@ -372,7 +372,7 @@ h3{
     align-items: center;
 }
 .experiences-container{
-    background-color: var(--color-white);
+    background-color: var(--body-color);
     border-radius: 14px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
@@ -455,15 +455,12 @@ h3{
     border-radius: 25px;
 }
 .select-dropdown li:hover{
-  background-color: var(--first-color) !important;
-  color: white !important;
+    background-color: var(--first-color) !important;
+    color: white !important;
 }
 .select-dropdown li:first-child{
     background-color: var(--first-color);
     color: white;
-}
-.select-dropdown input:focus ~ label {
-  /* background-color: #1e9fab; */
 }
 .select-dropdown input[type="radio"] {
   position: absolute;
@@ -483,6 +480,7 @@ h3{
 .tab-titles{
     display: flex;
     justify-content: space-between;
+    background-color: var(--color-white);
 }
 .tab-links{
     font-size: 18px;
@@ -508,7 +506,7 @@ h3{
     width: 50%;
 }
 
-.about-info{
+.education .left, .volunteer .left{
     position: relative;
     display: flex;
     justify-content: center;
@@ -522,26 +520,10 @@ h3{
     background-color: #e9ecef;
     object-fit: cover;
 }
-.about-info img {
+.education .left img, .volunteer .left img{
     /* border-radius: 14px; */
     width: 100%;
     /* object-fit: contain; */
-}
-.about-info p{
-    text-align: center;
-    font-size: 15px;
-    color: #777;
-}
-.about-btn button{
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-    background: var(--first-color);
-    color: var(--color-white);
-    border-radius: 30px;
-}
-.about-btn button:hover{
-    background: var(--first-color-hover);
 }
 .description-text{
     /* z-index: -1; */
@@ -571,7 +553,7 @@ h3{
     right: 0;
     left: 50px;
 } */
-.about-info.right {
+.education.right {
     left: auto;
     right: 4rem;
 }
@@ -917,11 +899,28 @@ footer{
     .section:not(#home){
         padding-block: 2em;
     }
-    .section#experiences div:not(:first-child){
+    .experiences-container .tab-titles{
         display: none;
     }
     .experiences-select{
         display: block !important;
+    }
+    .tab-contents .row{
+        padding: 10px;
+    }
+    .tab-contents .row .right{
+        display: none;
+    }
+    .experiences-container{
+        box-shadow: none;
+        background: var(--body-color);
+        border-radius: unset;
+    }
+    .tab-contents{
+        background: var(--body-color);
+    }
+    .row .works{
+        background-color: var(--body-color);
     }
     .featured-name{
         font-size: 34px;

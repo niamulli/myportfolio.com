@@ -491,7 +491,7 @@ h3{
     position: relative;
     cursor: pointer;
 }
-.tab-links::after{
+.tab-titles .tab-links::after{
     content: '';
     width: 0;
     height: 2px;
@@ -501,7 +501,7 @@ h3{
     bottom: 0;
     transition: 0.5s;
 }
-.active-tab-link::after{
+.tab-titles .active-tab-link::after{
     width: 50%;
 }
 

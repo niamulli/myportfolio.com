@@ -588,7 +588,7 @@ h3{
 }
 .position {
     font-weight: bold;
-    font-size: 21px;
+    font-size: 20px;
     color: var(--text-color-second);
     margin-bottom: 4px;
 }
@@ -603,8 +603,8 @@ h3{
 }
 .company span{
     /* color:  #655719 ; */
-    color: var(--text-color-second);
-    font-weight: 600;
+    color: var(--color1);
+    font-weight: 500;
 }
 .col img{
     object-fit: cover;
@@ -1004,6 +1004,7 @@ ul.dropdown-menu{
     .experiences-container{
         box-shadow: none;
         background: var(--body-color);
+        /* background-color: #1e9fab; */
         border-radius: unset;
     }
     .tab-contents{

@@ -896,7 +896,7 @@ ul.dropdown-menu{
 
 .card-list{
     display: none;
-    width: 90%;
+    width: 100%;
     max-width: 400px;
 }
 .card.education {
@@ -926,7 +926,7 @@ ul.dropdown-menu{
     font-weight: 400;
 }
 .card-header h3{
-    font-size: 13px;
+    font-size: 14px;
 }
 
 

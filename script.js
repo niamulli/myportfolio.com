@@ -115,6 +115,8 @@ function myMenuFunction(){
   window.addEventListener('scroll', scrollActive);
 
 
+const taskDetailList = document.querySelectorAll('#list-container');
+
 /* ---- OPEN TAB CONTENT --- */
 const tabLinks = document.getElementsByClassName('tab-links');
 const tabContents = document.getElementsByClassName('tab-contents');
@@ -133,6 +135,11 @@ const openTab = (tabName) => {
   experiencesSelect.classList.remove('active');
   event.currentTarget.classList.add('active-tab-link');
   document.getElementById(tabName).classList.add('active-tab');
+  if(tabName == "work"){
+    taskDetailList.forEach((list) => {
+      list.classList.remove('active');
+    })
+  }
 }
 
 const optionLinks = document.querySelector('.select-dropdown li');
@@ -154,6 +161,5 @@ selectBtn.addEventListener("click", () => {
 });
 
 const openTaskDetailList = (listOrder) => {
-  const taskDetailList = document.querySelectorAll('#list-container');
   taskDetailList[listOrder].classList.toggle('active');
 }

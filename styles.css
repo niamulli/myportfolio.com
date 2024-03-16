@@ -942,7 +942,7 @@ ul.dropdown-menu{
 	padding: 1.25rem;
 	position: relative;
 	transition: .15s ease-in;
-  width: 90%;
+  width: 100%;
   max-width: 400px;
 }
 .card.volunteer:focus-within{

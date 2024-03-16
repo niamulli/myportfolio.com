@@ -587,7 +587,7 @@ h3{
     /* border: 1px solid var(--text-color-second); */
 }
 .position {
-    font-weight: bold;
+    font-weight: 600;
     font-size: 20px;
     color: var(--text-color-second);
     margin-bottom: 4px;

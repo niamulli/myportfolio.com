@@ -807,8 +807,7 @@ footer{
     font-size: 14px;
     margin-top: 10px;
 }
-
-.card{
+.card.work{
     display: none;
     background-color: var(--color-white);
     width: 100%;
@@ -894,6 +893,41 @@ ul.dropdown-menu{
   .list-task-detail ul li:not(:first-child){
     border-top: 1px solid rgb(73, 80, 87, 0.2);
   }
+
+.card-list{
+    display: none;
+    width: 90%;
+    max-width: 400px;
+}
+.card.education {
+    background-color: #FFF;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 1.25rem;
+    position: relative;
+    transition: .15s ease-in;
+}
+.card.education:focus-within{
+    box-shadow: 0 0 0 2px #16C79A, 0 10px 60px 0 rgba(#000, .1);
+}
+.card-image img{
+    max-width: 100%;
+    display: block;
+}
+.card-image{
+    border-radius: 15px;
+    overflow: hidden;
+}
+.card-header {
+    display: flex;
+    justify-content: center;
+    color: rgb(68, 68, 68);
+    font-weight: 400;
+}
+.card-header h3{
+    font-size: 13px;
+}
 
 
 /* ----- MEDIA QUERY == 1024px / RESPONSIVE ----- */
@@ -1067,8 +1101,14 @@ ul.dropdown-menu{
     .tab-contents{
         gap: 20px;
     }
-    .card{
+    .card.work{
         display: flex;
+    }
+    .card-list{
+        display: block;
+    }
+    .row.education{
+        display: none;
     }
 }
 

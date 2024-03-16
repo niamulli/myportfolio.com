@@ -829,7 +829,7 @@ footer{
 .btn-task-detail{
     text-align: center;
     font-size: 10px;
-    background-color: rgb(110, 87, 224);
+    background-color: #a293eb;
     color: white;
     padding: 5px;
     cursor: pointer;
@@ -882,7 +882,7 @@ ul.dropdown-menu{
     padding-right: 12px;
     font-variant-numeric: tabular-nums;
     align-self: flex-start;
-    background-image: linear-gradient(to bottom, #1e9fab, #cafdff);
+    background-image: linear-gradient(to bottom, #157578, #1e9fab);
     background-attachment: fixed;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

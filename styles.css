@@ -868,14 +868,14 @@ ul.dropdown-menu{
     padding: 0;
     max-width: 100%;
 }
-  .dropdown-menu li{
+.dropdown-menu li{
     counter-increment: index; 
     display: flex;
     align-items: center;
     padding: 4px;
     font-size: 11px;
     box-sizing: border-box;
-  }
+}
   .dropdown-menu li::before{
     content: counters(index, ".", decimal-leading-zero);
     font-size: 15px;
@@ -890,14 +890,14 @@ ul.dropdown-menu{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  .list-task-detail ul li:not(:first-child){
+  .list-task-detail ul li:not(:first-child), .list-activity-details ul li:not(:first-child){
     border-top: 1px solid rgb(73, 80, 87, 0.2);
   }
 
 .card-list{
     display: none;
-    width: 100%;
-    max-width: 400px;
+    flex-direction: column;
+    gap: 20px;
 }
 .card.education {
     background-color: #FFF;
@@ -907,6 +907,8 @@ ul.dropdown-menu{
     padding: 1.25rem;
     position: relative;
     transition: .15s ease-in;
+    width: 100%;
+    max-width: 400px;
 }
 .card.education:focus-within{
     box-shadow: 0 0 0 2px #16C79A, 0 10px 60px 0 rgba(#000, .1);
@@ -925,8 +927,55 @@ ul.dropdown-menu{
     color: rgb(68, 68, 68);
     font-weight: 400;
 }
+.card.volunteer .card-header{
+    margin-bottom: 8px;
+}
 .card-header h3{
     font-size: 14px;
+    text-align: center;
+}
+.card.volunteer {
+	background-color: #FFF;
+	box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+	border-radius: 15px;
+	overflow: hidden;
+	padding: 1.25rem;
+	position: relative;
+	transition: .15s ease-in;
+  width: 90%;
+  max-width: 400px;
+}
+.card.volunteer:focus-within{
+  box-shadow: 0 0 0 2px #16C79A, 0 10px 60px 0 rgba(#000, .1);
+}
+.card.volunteer .card-image{
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.card-footer{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  .btn-activity-details{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    background-color:  #a293eb;
+    color: white;
+    font-weight: 500;
+    padding: 4px;
+    cursor: pointer;
+  }
+  .card-footer.active{
+    bottom: unset;
+  }
+.card.volunteer .dropdown-menu{
+    margin-top: 45px;
 }
 
 
@@ -1095,7 +1144,7 @@ ul.dropdown-menu{
         top: -13px;
         right: -12px;
     }
-    .tab-contents .row.work{
+    .row.work, .row.education, .row.volunteer{
         display: none;
     }
     .tab-contents{
@@ -1105,10 +1154,7 @@ ul.dropdown-menu{
         display: flex;
     }
     .card-list{
-        display: block;
-    }
-    .row.education{
-        display: none;
+        display: flex;
     }
 }
 

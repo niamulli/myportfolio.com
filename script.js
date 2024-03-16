@@ -115,7 +115,9 @@ function myMenuFunction(){
   window.addEventListener('scroll', scrollActive);
 
 
-const taskDetailList = document.querySelectorAll('#list-container');
+const taskDetailList = document.querySelectorAll('.list-task-detail .dropdown-menu');
+const activityDetailsList = document.querySelectorAll('.list-activity-details .dropdown-menu')
+const btnWrapper = document.querySelectorAll('.card-footer');
 
 /* ---- OPEN TAB CONTENT --- */
 const tabLinks = document.getElementsByClassName('tab-links');
@@ -162,4 +164,9 @@ selectBtn.addEventListener("click", () => {
 
 const openTaskDetailList = (listOrder) => {
   taskDetailList[listOrder].classList.toggle('active');
+}
+
+const openActivityDetailsList = (listOrder) => {
+  activityDetailsList[listOrder].classList.toggle('active');
+  btnWrapper[listOrder].classList.toggle('active');
 }

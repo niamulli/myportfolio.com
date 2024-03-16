@@ -885,7 +885,7 @@ ul.dropdown-menu{
     padding-right: 10px;
     font-variant-numeric: tabular-nums;
     align-self: flex-start;
-    background-image: linear-gradient(to bottom, #1e9fab ,  var(--color-white));
+    background-image: linear-gradient(to bottom, var(--color-white), var(--third-color));
     background-attachment: fixed;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

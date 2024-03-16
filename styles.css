@@ -602,8 +602,9 @@ h3{
     font-weight: 300;
 }
 .company span{
-    color: #c0a631;
-    font-weight: 500;
+    /* color:  #655719 ; */
+    color: var(--text-color-second);
+    font-weight: 600;
 }
 .col img{
     object-fit: cover;
@@ -877,7 +878,7 @@ ul.dropdown-menu{
   }
   .dropdown-menu li::before{
     content: counters(index, ".", decimal-leading-zero);
-    font-size: 16px;
+    font-size: 15px;
     text-align: right;
     font-weight: bold;
     min-width: 30px;

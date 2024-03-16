@@ -59,6 +59,9 @@ function myMenuFunction(){
   
   /* -- PROJECT BOX -- */
   sr.reveal('.project-box',{interval: 150})
+
+  /*  -- EXPERIENCES -- */
+  sr.reveal('.experiences-container',{})
   
   /* -- HEADINGS -- */
   sr.reveal('.top-header',{})
@@ -149,3 +152,8 @@ selectBtn.addEventListener("click", () => {
     selectBtn.getAttribute("aria-expanded") === "true" ? "false" : "true"
   );
 });
+
+const openTaskDetailList = (listOrder) => {
+  const taskDetailList = document.querySelectorAll('#list-container');
+  taskDetailList[listOrder].classList.toggle('active');
+}

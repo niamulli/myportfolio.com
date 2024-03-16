@@ -121,7 +121,7 @@
                     </div>
                 </div>
             </section>
-            <!-- -------------- ABOUT BOX ---------------- -->
+            <!-- -------------- EXPERIENCES ---------------- -->
             <section class="section" id="experiences">
                 <div class="top-header">
                     <h1>Experiences</h1>
@@ -134,8 +134,8 @@
                         aria-expanded="false"
                         aria-controls="select-dropdown"
                     >
-                    <span class="selected-value">Work</span>
-                    <span class="arrow"></span>
+                        <span class="selected-value">Work</span>
+                        <span class="arrow"></span>
                     </button>
                     <ul class="select-dropdown" role="listbox" id="select-dropdown">
                         <li role="option" onclick="openTab('work')" class="tab-links active-tab-link">
@@ -159,10 +159,50 @@
                         <p class="tab-links" onclick="openTab('volunteer')">Volunteer</p>
                     </div>
                     <div class="tab-contents active-tab" id="work">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-title position">Staff Accounting</div>
+                                <div class="card-description">
+                                    <p class="company">in Boba & Tea Express</p>
+                                    <p class="time">(November 2022 - January 2023)</p>
+                                </div>
+                            </div>
+                            <div class="btn-task-detail" onclick="openTaskDetailList(0)">Task Detail</div>
+                            <div class="list-task-detail">
+                                <ul class="dropdown-menu dropdown-animated" id="list-container">
+                                    <li>Enter daily transactions into cash flow</li>
+                                    <li>Make monthly financial reports</li>
+                                    <li>Make a recap of shop employee attendance</li>
+                                    <li>Make a recap of the store's daily stock closing report</li>
+                                    <li>Carry out store stock taking in December</li>
+                                    <li>Make a recap of incoming and outgoing goods in the stock warehouse</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-title position">Lecturer Assistance</div>
+                                <div class="card-description">
+                                    <p class="company">in Sultan Agung University</p>
+                                    <p class="time">(November 2022 - January 2023)</p>
+                                </div>
+                            </div>
+                            <div class="btn-task-detail" onclick="openTaskDetailList(1)">Task Detail</div>
+                            <div class="list-task-detail">
+                                <ul class="dropdown-menu dropdown-animated" id="list-container">
+                                    <li>Enter daily transactions into cash flow</li>
+                                    <li>Make monthly financial reports</li>
+                                    <li>Make a recap of shop employee attendance</li>
+                                    <li>Make a recap of the store's daily stock closing report</li>
+                                    <li>Carry out store stock taking in December</li>
+                                    <li>Make a recap of incoming and outgoing goods in the stock warehouse</li>
+                                </ul>
+                            </div>
+                        </div>
                         <div class="row work"> 
                             <div class="col left">
-                                <h3 class="company"><span>Boba & Tea Express</span></h3>
-                                <p class="position">Staff Accounting</p>
+                                <h3 class="position"><span>Staff Accounting</span></h3>
+                                <p class="company">in Boba & Tea Express</p>
                                 <p class="time">(November 2022 - January 2023)</p>
                             </div>
                             <div class="col right">
@@ -178,8 +218,8 @@
                         </div>
                         <div class="row work">
                             <div class="col left">
-                                <h3 class="company"><span>Sultan Agung University</span></h3>
-                                <p class="position">Lecturer Assistance</p>
+                                <h3 class="position"><span>Lecturer Assistance</span></h3>
+                                <p class="company">in Sultan Agung University</p>
                                 <p class="time">(March 2022 - August 2022)</p>
                             </div>
                             <div class="col right">

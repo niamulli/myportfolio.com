@@ -87,8 +87,10 @@ i{
 }
 
 /* ------- BASE -------- */
-body{
+html, body{
     background: var(--body-color);
+    width: 100%;
+    overflow-x: hidden;
 }
 .container{
     width: 100%;
@@ -101,13 +103,13 @@ nav{
     position: fixed;
     display: flex;
     justify-content: space-between;
+    z-index: 200;
     width: 100%;
     height: 90px;
     line-height: 90px;
     background: var(--body-color);
     padding-inline: 9vw;
     transition: .3s;
-    z-index: 100;
 }
 .nav-logo{
    position: relative;
@@ -372,15 +374,17 @@ h3{
     align-items: center;
 }
 .experiences-container{
-    background-color: var(--body-color);
+    background-color: var(--color-white);
+    width: 95%;
     border-radius: 14px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 .experiences-select{
     position: relative;
+    z-index: 100;
     width: 300px;
     max-width: 100%;
-    /* font-size: 1rem; */
+    margin-bottom: 20px;
     color: black;
 }
 .select-button{
@@ -398,6 +402,7 @@ h3{
 }
 .selected-value {
     text-align: left;
+    font-size: 14px;
 }
 .arrow {
     border-left: 5px solid transparent;
@@ -442,6 +447,7 @@ h3{
     z-index: 1;
     cursor: pointer;
     padding: 7px;
+    font-size: 14px;
     /* background-color: #1e9fab; */
     display: flex;
     gap: 1rem;
@@ -558,7 +564,6 @@ h3{
 }
 .row.work{
     font-size: 14px;
-    background: var(--color-white);
     gap: 0;
     border-radius: 16px;
     margin-bottom: 0;
@@ -566,10 +571,11 @@ h3{
 }
 .tab-contents{
     display: none;
-    background-color: var(--color-white);
 }
 .tab-contents.active-tab{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .tab-contents .row{
     padding: 40px;
@@ -580,23 +586,21 @@ h3{
     display: block;
     /* border: 1px solid var(--text-color-second); */
 }
-.company {
+.position {
     font-weight: bold;
     font-size: 20px;
     color: var(--text-color-second);
     margin-bottom: 4px;
-}
-.company span{
-    text-decoration: underline;
 }
 .time{
     font-size: 14px;
     color: var(--text-color-second);
     display: block;
 }
-.work .position{
+.work .company{
     font-size: 16px;
     color: var(--text-color-second);
+    font-weight: 300;
 }
 .col img{
     object-fit: cover;
@@ -800,6 +804,83 @@ footer{
     margin-top: 10px;
 }
 
+.card{
+    display: none;
+    background-color: var(--color-white);
+    color: rgb(68, 68, 68);
+    max-width: 90%;
+    width: 350px;
+    border-radius: 5px;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  }
+.card-content{
+    padding: 10px 20px;
+}
+.btn-task-detail{
+    text-align: center;
+    font-size: 12px;
+    background-color: rgb(110, 87, 224);
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+}
+.dropdown-menu{
+    font-size: 13px;
+    animation: rotateMenu 400ms ease-in-out forwards;
+    transform-origin: top center;
+  }
+.dropdown-animated{
+    display: none;
+}
+.dropdown-animated li{
+    display: block;
+    opacity: 1;
+}
+.dropdown-menu.active{
+    display: block;
+}
+@keyframes rotateMenu {
+    0% {
+        transform: rotateX(-90deg)
+    }
+    70% {
+        transform: rotateX(20deg) 
+    }
+    100% {
+        transform: rotateX(0deg) 
+    }
+}
+ul.dropdown-menu{
+    counter-reset: index;
+    padding: 0;
+    max-width: 100%;
+}
+  .dropdown-menu li{
+    counter-increment: index; 
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    box-sizing: border-box;
+  }
+  .dropdown-menu li::before{
+    content: counters(index, ".", decimal-leading-zero);
+    font-size: 16px;
+    text-align: right;
+    font-weight: bold;
+    min-width: 50px;
+    padding-right: 12px;
+    font-variant-numeric: tabular-nums;
+    align-self: flex-start;
+    background-image: linear-gradient(to bottom, rgb(192, 166, 49), #7131c0);
+    background-attachment: fixed;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .list-task-detail ul li:not(:first-child){
+    border-top: 1px solid rgb(73, 80, 87, 0.2);
+  }
+
 
 /* ----- MEDIA QUERY == 1024px / RESPONSIVE ----- */
 @media only screen and (max-width: 1024px){
@@ -907,9 +988,6 @@ footer{
     .tab-contents .row{
         padding: 10px;
     }
-    .tab-contents .row .right{
-        display: none;
-    }
     .experiences-container{
         box-shadow: none;
         background: var(--body-color);
@@ -968,7 +1046,14 @@ footer{
         top: -13px;
         right: -12px;
     }
-    .education .left, .volunteer .left{
-        position: initial;
+    .tab-contents .row.work{
+        display: none;
+    }
+    .tab-contents{
+        gap: 10px;
+    }
+    .card{
+        display: flex;
     }
 }
+

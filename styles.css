@@ -603,7 +603,7 @@ h3{
 }
 .company span{
     color: #c0a631;
-    font-weight: bold;
+    font-weight: 500;
 }
 .col img{
     object-fit: cover;

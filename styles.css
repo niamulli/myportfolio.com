@@ -872,7 +872,7 @@ ul.dropdown-menu{
     display: flex;
     align-items: center;
     padding: 4px;
-    font-size: 12px;
+    font-size: 11px;
     box-sizing: border-box;
   }
   .dropdown-menu li::before{
@@ -884,7 +884,7 @@ ul.dropdown-menu{
     padding-right: 12px;
     font-variant-numeric: tabular-nums;
     align-self: flex-start;
-    background-image: linear-gradient(to bottom, #157578, #1e9fab);
+    background-image: linear-gradient(to bottom, #e5d799 ,  #cbaf33);
     background-attachment: fixed;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

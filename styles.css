@@ -881,11 +881,11 @@ ul.dropdown-menu{
     font-size: 15px;
     text-align: right;
     font-weight: bold;
-    min-width: 30px;
+    min-width: 25px;
     padding-right: 10px;
     font-variant-numeric: tabular-nums;
     align-self: flex-start;
-    background-image: linear-gradient(to bottom, var(--color-white), var(--third-color));
+    background-image: linear-gradient(to bottom,  #cbaf33 , #877522);
     background-attachment: fixed;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

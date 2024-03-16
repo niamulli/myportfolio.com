@@ -594,13 +594,15 @@ h3{
 }
 .time{
     font-size: 14px;
-    color: var(--text-color-second);
+    color: #6c757d;
     display: block;
 }
-.work .company{
+.company{
     font-size: 16px;
-    color: var(--text-color-second);
     font-weight: 300;
+}
+.company span{
+    color: #c03167;
 }
 .col img{
     object-fit: cover;
@@ -807,13 +809,20 @@ footer{
 .card{
     display: none;
     background-color: var(--color-white);
-    color: rgb(68, 68, 68);
-    max-width: 90%;
-    width: 350px;
+    width: 100%;
     border-radius: 5px;
     flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-  }
+}
+.card-title{
+    font-size: 1rem;
+}
+.card-description .company{
+    font-size: 0.8rem;
+}
+.card-description .time{
+    font-size: 11px;
+}
 .card-content{
     padding: 10px 20px;
 }
@@ -1050,7 +1059,7 @@ ul.dropdown-menu{
         display: none;
     }
     .tab-contents{
-        gap: 10px;
+        gap: 20px;
     }
     .card{
         display: flex;

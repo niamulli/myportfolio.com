@@ -588,7 +588,7 @@ h3{
 }
 .position {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 21px;
     color: var(--text-color-second);
     margin-bottom: 4px;
 }
@@ -602,7 +602,8 @@ h3{
     font-weight: 300;
 }
 .company span{
-    color: #c03167;
+    color: #c0a631;
+    font-weight: bold;
 }
 .col img{
     object-fit: cover;
@@ -829,8 +830,9 @@ footer{
 .btn-task-detail{
     text-align: center;
     font-size: 10px;
-    background-color: #26cad9;
-    color: white;
+    background-color: #92e4eb ;
+    ;
+    color: black;
     font-weight: 500;
     padding: 5px;
     cursor: pointer;
@@ -879,7 +881,7 @@ ul.dropdown-menu{
     font-size: 16px;
     text-align: right;
     font-weight: bold;
-    min-width: 40px;
+    min-width: 30px;
     padding-right: 12px;
     font-variant-numeric: tabular-nums;
     align-self: flex-start;

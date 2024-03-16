@@ -829,8 +829,9 @@ footer{
 .btn-task-detail{
     text-align: center;
     font-size: 10px;
-    background-color: #a293eb;
+    background-color: #26cad9;
     color: white;
+    font-weight: 500;
     padding: 5px;
     cursor: pointer;
 }

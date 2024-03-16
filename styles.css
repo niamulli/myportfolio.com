@@ -436,10 +436,10 @@ h3{
     visibility: hidden;
 }
 .select-dropdown:focus-within{
-    box-shadow: 0 10px 25px rgba(94, 108, 233, 0.6);
+    box-shadow: 0 10px 25px  #836fe4;
 }
 .select-dropdown .active-tab-link{
-    background-color: var(--first-color);
+    background-color:  #836fe4;
     color: white;
 }
 .select-dropdown li{
@@ -465,7 +465,7 @@ h3{
     border-radius: 25px;
 }
 .select-dropdown li:hover{
-    background-color: var(--first-color) !important;
+    background-color:  #836fe4 !important;
     color: white !important;
 }
 .select-dropdown input[type="radio"] {

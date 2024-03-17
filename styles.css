@@ -654,7 +654,7 @@ h3{
     overflow: hidden;
 }
 .project-box>h3{
-    font-size: 16px;
+    font-size: 0.9em;
     text-align: center;
 }
 .project-box>i{
@@ -1112,23 +1112,25 @@ ul.dropdown-menu{
         /* flex-wrap: nowrap; */
     }
     .project-box{
+        box-sizing: border-box;
         width: unset;
         border-radius: 15px;
         flex: 0 1 48%;
         height: unset;
         aspect-ratio: 1 / 1;
         margin-bottom: 12px;
-        padding: unset;
+        padding: 32px 10px;
+        justify-content: space-between;
     }
     .project-box>i{
         font-size: 2em;
-        margin-bottom: 12px;
+        margin-bottom: 15px;
     }
     .project-box label{
         display: none;
     }
     .project-box h3{
-        font-size: 13px;
+        /* margin: 0 10px; */
     }
     .form-inputs{
         flex-direction: column;

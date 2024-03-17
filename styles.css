@@ -1116,11 +1116,11 @@ ul.dropdown-menu{
         height: unset;
         aspect-ratio: 1 / 1;
         margin-bottom: 12px;
-        padding: 10px;
+        padding: unset;
     }
     .project-box>i{
-        font-size: 3em;
-        margin-bottom: 10px;
+        font-size: 2em;
+        margin-bottom: 12px;
     }
     .project-box label{
         display: none;

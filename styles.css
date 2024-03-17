@@ -838,7 +838,7 @@ footer{
 }
 .dropdown-menu{
     font-size: 13px;
-    animation: rotateMenu 400ms ease-in-out forwards;
+    animation: rotateMenu 700ms ease-in-out forwards;
     transform-origin: top center;
 }
 .dropdown-animated{

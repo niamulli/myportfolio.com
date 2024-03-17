@@ -58,7 +58,8 @@ function myMenuFunction(){
   sr.reveal('.featured-image',{delay: 300})
   
   /* -- PROJECT BOX -- */
-  sr.reveal('.project-box',{interval: 150})
+  // sr.reveal('.project-box',{interval: 150})
+ 
 
   /*  -- EXPERIENCES -- */
   sr.reveal('.experiences-container',{})
@@ -75,6 +76,13 @@ function myMenuFunction(){
   duration: 2000,
   reset: true
   })
+
+  const skills = document.querySelectorAll('.project-box');
+  for (let i = 0; i < skills.length; i++) {
+   if(i % 2 == 0){
+     srLeft.reveal(skills[i], {delay: 100})
+   }
+  }
   
 
   srLeft.reveal('.contact-info',{delay: 100})
@@ -86,6 +94,12 @@ function myMenuFunction(){
   duration: 2000,
   reset: true
   })
+
+  for (let i = 0; i < skills.length; i++) {
+    if(i % 2 !== 0){
+      srRight.reveal(skills[i], {delay: 100})
+    }
+   }
   
   srRight.reveal('.form-control',{delay: 100})
   

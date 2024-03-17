@@ -659,7 +659,7 @@ h3{
 }
 .project-box>i{
     font-size: 30px;
-    color: #00B5E7;
+    color: #98a9e2;
     margin-bottom: 25px;
 }
 .project-box label{
@@ -1104,11 +1104,29 @@ ul.dropdown-menu{
     .social_icons{
         margin-top: 20px;
     }
+    .project-container{
+        gap: unset;
+        justify-content: space-between
+        /* flex-wrap: nowrap; */
+    }
     .project-box{
-        width: 100%;
+        width: unset;
+        border-radius: 15px;
+        flex: 0 1 48%;
+        height: unset;
+        aspect-ratio: 1 / 1;
+        margin-bottom: 12px;
+        padding: 5px;
     }
     .project-box>i{
-        font-size: 40px;
+        font-size: 3em;
+        margin-bottom: 10px;
+    }
+    .project-box label{
+        display: none;
+    }
+    .project-box h3{
+        font-size: 14px;
     }
     .form-inputs{
         flex-direction: column;

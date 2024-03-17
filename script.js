@@ -59,6 +59,8 @@ function myMenuFunction(){
   
   /* -- PROJECT BOX -- */
   // sr.reveal('.project-box',{interval: 150})
+
+sr.reveal('.experiences-select', {})
  
 
   /*  -- EXPERIENCES -- */

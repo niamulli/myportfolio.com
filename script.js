@@ -66,6 +66,8 @@ function myMenuFunction(){
   
   /* -- HEADINGS -- */
   sr.reveal('.top-header',{})
+
+  // sr.reveal('.email-sent-feedback', {delay: 100});
   
   /* ----- ## -- SCROLL REVEAL LEFT_RIGHT ANIMATION -- ## ----- */
   
@@ -184,3 +186,9 @@ const openActivityDetailsList = (listOrder) => {
   activityDetailsList[listOrder].classList.toggle('active');
   btnWrapper[listOrder].classList.toggle('active');
 }
+
+
+const btnSendEmail = document.querySelector('.form-button button');
+
+
+btnSendEmail.addEventListener('click', messageSuccess);

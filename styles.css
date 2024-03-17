@@ -979,7 +979,22 @@ ul.dropdown-menu{
 .card.volunteer .dropdown-menu{
     margin-top: 45px;
 }
-
+#contact .col{
+    justify-content: center;
+}
+.email-sent-feedback{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+.email-sent-feedback p{
+    /* background-color: #00B5E7; */
+}
+.img-success img{
+    width: 75%;
+}
 
 /* ----- MEDIA QUERY == 1024px / RESPONSIVE ----- */
 @media only screen and (max-width: 1024px){

@@ -659,7 +659,7 @@ h3{
 }
 .project-box>i{
     font-size: 30px;
-    color: #21b3c0;
+    color:  #21b3c0;
     margin-bottom: 25px;
 }
 .project-box label{
@@ -878,7 +878,7 @@ ul.dropdown-menu{
 }
   .dropdown-menu li::before{
     content: counters(index, ".", decimal-leading-zero);
-    font-size: 15px;
+    font-size: 14px;
     text-align: right;
     font-weight: bold;
     min-width: 25px;

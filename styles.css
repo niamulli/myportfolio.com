@@ -659,7 +659,7 @@ h3{
 }
 .project-box>i{
     font-size: 30px;
-    color:  #8a78e6;
+    color: #21b0bd  ;
     margin-bottom: 25px;
 }
 .project-box label{
@@ -1177,5 +1177,11 @@ ul.dropdown-menu{
     }
     .card-list{
         display: flex;
+    }
+    .footer_menu_list a{
+        margin-inline: 10px;
+    }
+    .top-footer p{
+        font-size: 20px;
     }
 }

@@ -58,7 +58,7 @@ function myMenuFunction(){
   sr.reveal('.featured-image',{delay: 300})
   
   /* -- PROJECT BOX -- */
-  // sr.reveal('.project-box',{interval: 150})
+  sr.reveal('.project-box',{interval: 150})
 
   /*  -- EXPERIENCES -- */
   sr.reveal('.experiences-container',{})

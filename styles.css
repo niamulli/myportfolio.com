@@ -659,7 +659,7 @@ h3{
 }
 .project-box>i{
     font-size: 30px;
-    color: #21b0bd  ;
+    color:  #26c9d8;
     margin-bottom: 25px;
 }
 .project-box label{
@@ -1115,10 +1115,10 @@ ul.dropdown-menu{
         box-sizing: border-box;
         width: unset;
         border-radius: 15px;
-        flex: 0 1 48%;
+        flex: 0 1 47%;
         height: unset;
         aspect-ratio: 1 / 1;
-        margin-bottom: 12px;
+        margin-bottom: 15px;
         padding: 32px 10px;
         justify-content: space-between;
     }

@@ -751,6 +751,9 @@ h3{
     padding-inline: 20px;
     outline: none;
 }
+.input-field:focus, textarea:focus{
+    border-color: #836fe4;
+}
 textarea{
     width: 100%;
     height: 250px;

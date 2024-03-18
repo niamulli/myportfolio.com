@@ -41,72 +41,99 @@ function myMenuFunction(){
     }
   }
   
+  
+  const skills = document.querySelectorAll('.project-box');
+
   /* ----- ## -- SCROLL REVEAL ANIMATION -- ## ----- */
-  const sr = ScrollReveal({
-        origin: 'top',
-        distance: '80px',
-        duration: 2000,
-        reset: true
-  })
   
-  /* -- HOME -- */
-  sr.reveal('.featured-text-card',{})
-  sr.reveal('.featured-name',{delay: 100})
-  sr.reveal('.featured-text-info',{delay: 200})
-  sr.reveal('.featured-text-btn',{delay: 200})
-  sr.reveal('.social_icons',{delay: 200})
-  sr.reveal('.featured-image',{delay: 300})
-  
-  /* -- PROJECT BOX -- */
-  // sr.reveal('.project-box',{interval: 150})
 
-sr.reveal('.experiences-select', {})
- 
-
-  /*  -- EXPERIENCES -- */
-  sr.reveal('.experiences-container',{})
+  const swipeTopAnimation = () => {
+    const sr = ScrollReveal({
+      origin: 'top',
+      distance: '80px',
+      duration: 2000,
+      reset: true
+    })
+      /* -- HOME -- */
+    sr.reveal('.featured-text-card',{})
+    sr.reveal('.featured-name',{delay: 100})
+    sr.reveal('.featured-text-info',{delay: 200})
+    sr.reveal('.featured-text-btn',{delay: 200})
+    sr.reveal('.social_icons',{delay: 200})
+    sr.reveal('.featured-image',{delay: 300})
+    
+    /* -- PROJECT BOX -- */
+    sr.reveal('.experiences-select', {})
   
-  /* -- HEADINGS -- */
-  sr.reveal('.top-header',{})
+    /*  -- EXPERIENCES -- */
+    sr.reveal('.experiences-container',{})
+    
+    /* -- HEADINGS -- */
+    sr.reveal('.top-header',{})
+    sr.reveal('.project-box',{interval: 150})
+  }
+
 
   // sr.reveal('.email-sent-feedback', {delay: 100});
   
   /* ----- ## -- SCROLL REVEAL LEFT_RIGHT ANIMATION -- ## ----- */
   
   /* -- ABOUT INFO & CONTACT INFO -- */
-  const srLeft = ScrollReveal({
-  origin: 'left',
-  distance: '80px',
-  duration: 2000,
-  reset: true
-  })
-
-  const skills = document.querySelectorAll('.project-box');
-  for (let i = 0; i < skills.length; i++) {
-   if(i % 2 == 0){
-     srLeft.reveal(skills[i], {delay: 100})
-   }
-  }
   
 
-  srLeft.reveal('.contact-info',{delay: 100})
+  const swipeLeftAnimation = () => {
+    const srLeft = ScrollReveal({
+      origin: 'left',
+      distance: '80px',
+      duration: 2000,
+      reset: true
+    })
+
+    for (let i = 0; i < skills.length; i++) {
+      if(i % 2 == 0){
+        srLeft.reveal(skills[i], {delay: 100})
+      }
+    }
+
+    srLeft.reveal('.contact-info',{delay: 100})
+  }
+
+ 
   
   // /* -- ABOUT SKILLS & FORM BOX -- */
-  const srRight = ScrollReveal({
-  origin: 'right',
-  distance: '80px',
-  duration: 2000,
-  reset: true
+
+  const swipeRightAnimation = () => {
+    const srRight = ScrollReveal({
+      origin: 'right',
+      distance: '80px',
+      duration: 2000,
+      reset: true
+    })
+    
+    for (let i = 0; i < skills.length; i++) {
+      if(i % 2 !== 0){
+        srRight.reveal(skills[i], {delay: 100})
+      }
+    }
+    srRight.reveal('.form-control',{delay: 100})
+  }
+
+  const animationResponsive = (x) => {
+    if (x.matches){
+      swipeLeftAnimation();
+      swipeRightAnimation();
+    } else {
+      swipeTopAnimation();
+    }
+  }
+
+  let x = window.matchMedia("(max-width: 600px)");
+  animationResponsive(x);
+
+  x.addEventListener("change", () => {
+    animationResponsive(x);
   })
 
-  for (let i = 0; i < skills.length; i++) {
-    if(i % 2 !== 0){
-      srRight.reveal(skills[i], {delay: 100})
-    }
-   }
-  
-  srRight.reveal('.form-control',{delay: 100})
-  
   /* ----- CHANGE ACTIVE LINK ----- */
   
   const sections = document.querySelectorAll('section[id]')

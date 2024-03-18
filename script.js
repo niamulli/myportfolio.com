@@ -225,3 +225,7 @@ const btnSendEmail = document.querySelector('.form-button button');
 
 
 btnSendEmail.addEventListener('click', messageSuccess);
+
+const inputNameFocus = () => {
+  document.getElementById('name').focus();
+}

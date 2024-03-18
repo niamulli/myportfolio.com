@@ -655,7 +655,7 @@ h3{
     overflow: hidden;
 }
 .project-box>h3{
-    font-size: 0.75em;
+    font-size: 1em;
     text-align: center;
 }
 .project-box>i{
@@ -1149,7 +1149,7 @@ ul.dropdown-menu{
         display: none;
     }
     .project-box h3{
-        /* margin: 0 10px; */
+        font-size: 0.9em;
     }
     .form-inputs{
         flex-direction: column;
@@ -1202,5 +1202,11 @@ ul.dropdown-menu{
     }
     .top-footer p{
         font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .project-box h3{
+        font-size: 0.75em;
     }
 }

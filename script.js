@@ -54,7 +54,19 @@ function myMenuFunction(){
       duration: 2000,
       reset: true
     })
-      /* -- HOME -- */
+    
+    sr.reveal('.project-box',{interval: 150})
+  }
+
+
+  const sr = ScrollReveal({
+    origin: 'top',
+    distance: '80px',
+    duration: 2000,
+    reset: true
+  })
+
+    /* -- HOME -- */
     sr.reveal('.featured-text-card',{})
     sr.reveal('.featured-name',{delay: 100})
     sr.reveal('.featured-text-info',{delay: 200})
@@ -70,10 +82,6 @@ function myMenuFunction(){
     
     /* -- HEADINGS -- */
     sr.reveal('.top-header',{})
-    sr.reveal('.project-box',{interval: 150})
-  }
-
-
   // sr.reveal('.email-sent-feedback', {delay: 100});
   
   /* ----- ## -- SCROLL REVEAL LEFT_RIGHT ANIMATION -- ## ----- */
@@ -94,11 +102,15 @@ function myMenuFunction(){
         srLeft.reveal(skills[i], {delay: 100})
       }
     }
-
-    srLeft.reveal('.contact-info',{delay: 100})
   }
 
- 
+  const srLeft = ScrollReveal({
+    origin: 'left',
+    distance: '80px',
+    duration: 2000,
+    reset: true
+  })
+  srLeft.reveal('.contact-info',{delay: 100})
   
   // /* -- ABOUT SKILLS & FORM BOX -- */
 
@@ -115,8 +127,16 @@ function myMenuFunction(){
         srRight.reveal(skills[i], {delay: 100})
       }
     }
-    srRight.reveal('.form-control',{delay: 100})
   }
+
+  const srRight = ScrollReveal({
+    origin: 'right',
+    distance: '80px',
+    duration: 2000,
+    reset: true
+  })
+
+  srRight.reveal('.form-control',{delay: 100});
 
   const animationResponsive = (x) => {
     if (x.matches){

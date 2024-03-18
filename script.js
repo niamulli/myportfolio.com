@@ -186,6 +186,10 @@ const openTab = (tabName) => {
     taskDetailList.forEach((list) => {
       list.classList.remove('active');
     })
+  } else if(tabName == "volunteer"){
+    activityDetailsList.forEach((list) => {
+      list.classList.remove('active');
+    })
   }
 }
 

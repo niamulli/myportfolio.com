@@ -67,6 +67,7 @@ function myMenuFunction(){
   })
 
     /* -- HOME -- */
+    
     sr.reveal('.featured-text-card',{})
     sr.reveal('.featured-name',{delay: 100})
     sr.reveal('.featured-text-info',{delay: 200})
@@ -82,10 +83,16 @@ function myMenuFunction(){
     
     /* -- HEADINGS -- */
     sr.reveal('.top-header',{})
-  // sr.reveal('.email-sent-feedback', {delay: 100});
   
   /* ----- ## -- SCROLL REVEAL LEFT_RIGHT ANIMATION -- ## ----- */
-  
+  const srLogo = ScrollReveal({
+    origin: 'left',
+    opacity: 0,
+    distance: '80px',
+    duration: 2000,
+    reset: false
+  })
+  srLogo.reveal('.nav-logo', {delay: 300})
   /* -- ABOUT INFO & CONTACT INFO -- */
   
 

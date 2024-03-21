@@ -1183,9 +1183,9 @@ ul.dropdown-menu{
         box-sizing: border-box;
         padding: 0px;
         padding-bottom: 20%;
-        padding-inline: 10px;
+        padding-inline: 12px;
         align-content: center;
-        background-color: var(--first-color);
+        background-color:  #7660e1;
     }
     .project-box .face.face2{
         cursor: pointer;
@@ -1293,7 +1293,10 @@ ul.dropdown-menu{
 
 @media only screen and (max-width: 400px){
     .project-box .face2 h3{
-        font-size: 10px;
+        font-size: 0.7em;
+    }
+    .project-box .face2.active h3{
+        font-size: 9px;
     }
     .project-box .face1{
         padding: 0;

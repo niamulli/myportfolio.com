@@ -1199,6 +1199,7 @@ ul.dropdown-menu{
         /* display: none; */
         font-size: 0.75em;
         color: white;
+        font-weight: 500;
     }
     .project-box::after{
         display: none;
@@ -1229,6 +1230,7 @@ ul.dropdown-menu{
         font-size: 11px;
         margin-left: 5px;
         margin-bottom: 0;
+        font-weight: 500;
     }
     .face2.active i {
         margin-bottom: unset;

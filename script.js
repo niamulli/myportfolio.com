@@ -1,7 +1,6 @@
 /* ----- NAVIGATION BAR FUNCTION ----- */
 let menuBtn = document.getElementById("myNavMenu");
 let navList = document.getElementsByClassName("nav_list");
-console.log(navList);
 function myMenuFunction(){
     
     if(menuBtn.className === "nav-menu"){
@@ -255,4 +254,9 @@ btnSendEmail.addEventListener('click', messageSuccess);
 
 const inputNameFocus = () => {
   document.getElementById('name').focus();
+}
+
+const scndFace = document.querySelectorAll('.face2');
+const openDetailSkills = (i) => {
+  scndFace[i].classList.toggle('active');
 }

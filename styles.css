@@ -1162,7 +1162,7 @@ ul.dropdown-menu{
     .project-box{
         box-sizing: border-box;
         width: unset;
-        border-radius: 15px;
+        border-radius: 12px;
         flex: 0 1 48%;
         height: unset;
         aspect-ratio: 1 / 1;
@@ -1228,7 +1228,7 @@ ul.dropdown-menu{
     }
     .face2.active h3 {
         font-size: 11px;
-        margin-left: 5px;
+        margin-left: 7px;
         margin-bottom: 0;
         font-weight: 500;
     }
@@ -1238,6 +1238,7 @@ ul.dropdown-menu{
     }
     .face2 h3{
         font-size: 0.9em;
+        transition: 0.5s;
     }
     .form-inputs{
         flex-direction: column;

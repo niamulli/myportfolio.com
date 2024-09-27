@@ -425,7 +425,6 @@ h3{
     background-color: #fff;
     border: 1px solid #caced1;
     border-radius: 4px;
-    /* padding: 10px; */
     margin-top: 10px;
     left: 0;
     max-height: 200px;
@@ -449,7 +448,6 @@ h3{
     cursor: pointer;
     padding: 7px;
     font-size: 14px;
-    /* background-color: #1e9fab; */
     display: flex;
     gap: 1rem;
     align-items: center;
@@ -521,30 +519,17 @@ h3{
     border-radius: 12px;
     max-width: 400px;
     margin-right: -20px;
-    /* left: 4rem; */
     padding: 20px;
     background-color: #e9ecef;
     object-fit: cover;
 }
 .education .left img, .volunteer .left img{
-    /* border-radius: 14px; */
     width: 100%;
-    /* object-fit: contain; */
 }
 .description-text{
-    /* z-index: -1; */
     font-size: 14px;
-    /* border-radius: 10px; */
-    /* width: 90%; */
     min-height: 300px;
-    /* position: relative; */
-    /* right: 50px; */
-    /* background-color: #f1f1; */
-    /* padding: 20px; */
-    /* padding-left: 10px; */
     font-weight: 400;
-    /* padding-left: -1000px; */
-    /* margin-top: 25px; */
 }
 .description-text>p{
     height: fit-content;
@@ -553,12 +538,7 @@ h3{
 .description-text ul{
     margin-left: -20px;
 }
-/* .description-text.left{
-    padding-inline: 4rem 6rem;
-    text-align: right;
-    right: 0;
-    left: 50px;
-} */
+
 .education.right {
     left: auto;
     right: 4rem;
@@ -580,12 +560,16 @@ h3{
 }
 .tab-contents .row{
     padding: 40px;
-    /* background-color: #1e9fab; */
 }
 .work .col{
     padding: 20px;
     display: block;
-    /* border: 1px solid var(--text-color-second); */
+}
+
+.col.right ul {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
 }
 .position {
     font-weight: 600;
@@ -603,7 +587,6 @@ h3{
     font-weight: 300;
 }
 .company span{
-    /* color:  #655719 ; */
     color: var(--color1);
     font-weight: 500;
 }

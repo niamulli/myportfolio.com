@@ -124,7 +124,7 @@ nav{
     position: absolute;
     top: -15px;
     right: -15px;
-    font-size: 4em;
+    font-size: 5em;
     color: var(--text-color-second);
 }
 .nav-menu, .nav_menu_list{
@@ -1253,7 +1253,7 @@ ul.dropdown-menu{
         font-size: 24px;
     }
     .nav-logo span{
-        font-size: 4em;
+        font-size: 3em;
         top: -13px;
         right: -12px;
     }

@@ -124,7 +124,7 @@ nav{
     position: absolute;
     top: -15px;
     right: -15px;
-    font-size: 5em;
+    font-size: 4.5em;
     color: var(--text-color-second);
 }
 .nav-menu, .nav_menu_list{
@@ -1254,7 +1254,7 @@ ul.dropdown-menu{
     }
     .nav-logo span{
         font-size: 3em;
-        top: -13px;
+        top: -10px;
         right: -12px;
     }
     .row.work, .row.education, .row.volunteer{

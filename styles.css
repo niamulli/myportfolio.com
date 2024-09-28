@@ -124,7 +124,7 @@ nav{
     position: absolute;
     top: -15px;
     right: -15px;
-    font-size: 2em;
+    font-size: 4em;
     color: var(--text-color-second);
 }
 .nav-menu, .nav_menu_list{
